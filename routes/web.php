@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['middleware' => 'aa'], function () {
+    Route::get('/a1', 'AController@A1');
+
+    Route::get('/a2', 'AController@A2');
+});
+
+
+
