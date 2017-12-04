@@ -23,3 +23,7 @@ Route::group(['middleware' => 'aa'], function () {
 
 
 
+Route::group(['prefix'	=>	'bb'],	function()	{
+    Route::get('b1', ['as' => 'student', 'uses' => 'BController@B1']);
+    Route::get('b2',	['as' => 'student', 'uses' => 'BController@B2']);
+});
